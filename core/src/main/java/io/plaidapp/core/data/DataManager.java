@@ -109,9 +109,6 @@ public abstract class DataManager extends BaseDataManager<List<? extends PlaidIt
                 case SourceManager.SOURCE_DESIGNER_NEWS_POPULAR:
                     loadDesignerNewsTopStories(page);
                     break;
-                case SourceManager.SOURCE_DESIGNER_NEWS_RECENT:
-                    loadDesignerNewsRecent(page);
-                    break;
                 case SourceManager.SOURCE_PRODUCT_HUNT:
                     loadProductHunt(page);
                     break;
@@ -167,10 +164,6 @@ public abstract class DataManager extends BaseDataManager<List<? extends PlaidIt
 
     private void loadDesignerNewsTopStories(final int page) {
         storiesRepository.loadTopStories(page, this);
-    }
-
-    private void loadDesignerNewsRecent(final int page) {
-        storiesRepository.loadRecent(page, this);
     }
 
     private void loadDesignerNewsSearch(final Source.DesignerNewsSearchSource source,
